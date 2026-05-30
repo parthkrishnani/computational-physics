@@ -7,4 +7,4 @@ while True:
     vp.rate(60)
     s.pos.x = 10*np.cos(theta)
     s.pos.y = 10*np.sin(theta)
-    theta += 0.05
+    theta += 0.01
