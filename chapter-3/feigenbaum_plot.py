@@ -7,7 +7,7 @@ for r in r_values:
     x=0.5
     for i in range(1000):
         x=r*x*(1-x)
-    for i in range(300):
+    for i in range(1000):
         x=r*x*(1-x)
         x_plot.append(x)
         r_plot.append(r)
