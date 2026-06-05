@@ -7,7 +7,7 @@ b=np.pi
 N=1000
 h=(b-a)/N
 m=1
-x_val=np.arange(0,20.1,0.1)
+x_val=np.arange(0.1,20.1,0.1)
 x_plt=[]
 f_plt=[]
 for x in x_val:
@@ -22,7 +22,7 @@ for x in x_val:
 plt.plot(x_plt,f_plt)
 
 m=2
-x_val=np.arange(0,20.1,0.1)
+x_val=np.arange(0.1,20.1,0.1)
 x_plt=[]
 f_plt=[]
 for x in x_val:
@@ -38,7 +38,7 @@ for x in x_val:
 plt.plot(x_plt,f_plt)
 
 m=0
-x_val=np.arange(0,20.1,0.1)
+x_val=np.arange(0.1,20.1,0.1)
 x_plt=[]
 f_plt=[]
 for x in x_val:
