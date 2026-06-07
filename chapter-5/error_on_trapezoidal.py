@@ -17,3 +17,5 @@ for i in range(1,N2):
 I2*=h2
 print("Trapezoidal rule with N=10: ",I1)
 print("Trapezoidal rule with N=100: ",I2)
+e=abs(I2-I1)/3
+print("Error estimate: ",e)
