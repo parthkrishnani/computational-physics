@@ -2,7 +2,7 @@ import numpy as np
 def f(x):
     return np.sin(10*np.sqrt(x))
 a=0 #lower limit
-b=2 #upper limit
+b=1 #upper limit
 M=20
 R_vals=np.zeros([M,M]) #Romberg triangle values
 I_vals=np.zeros(M) #Trapezoidal integration values
