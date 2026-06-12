@@ -32,14 +32,11 @@ plt.xlabel('x')
 plt.ylabel('Probability Density')
 plt.grid()
 #plt.show()
-
 x_=np.linspace(-10,10,1000)
 p30=np.zeros(len(x_))
 for i in range(len(x_)):
     p30[i]=psi(30,x_[i])
 plt.plot(x_,p30,label='n=30')
-plt.xlabel('x')
-plt.ylabel('Probability Density')
 plt.show()
 
 def integrand(x):
