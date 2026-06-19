@@ -13,6 +13,17 @@ for m in range(r):
         else:
             A[[m, m-1]] = A[[m-1, m]]
             b[[m,m-1]] = b[[m-1,m]]
-
-x=np.linalg.solve(A,b)
+x=np.empty(r)
+for k in range(r):
+    d=A[k,k]
+    A[k,:]/=d
+    b[k]/=d
+    for j in range(k+1,r):
+        mul=A[j,k]
+        A[j,:]-=mul*A[k,:]
+        b[j]-=mul*b[k]
+for i in range(r-1,-1,-1):
+    x[i]=b[i]
+    for l in range(i+1,r):
+        x[i]-=A[i,l]*x[l]
 print(x)
