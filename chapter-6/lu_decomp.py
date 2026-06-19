@@ -19,6 +19,7 @@ for i in range(N):
     div = U[i,i]
     U[i,:]/=div
     b[i]/=div
+    L[i,i]=div
     for j in range(i+1,N):
         mul=U[j,i]
         L[j,i]=mul
