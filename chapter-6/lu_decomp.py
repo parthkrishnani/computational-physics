@@ -14,7 +14,7 @@ for m in range(N):
             A[[m, m-1]] = A[[m-1, m]]
             b[[m,m-1]] = b[[m-1,m]]
 U=A.copy()
-L=np.zeros([N,N])
+L=np.eye(N)
 for i in range(N):
     div = U[i,i]
     U[i,:]/=div
