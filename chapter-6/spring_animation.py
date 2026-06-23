@@ -1,5 +1,5 @@
 import vpython as vp
-from numpy import empty,zeros,array,exp,cos
+from numpy import empty,zeros,array,exp,cos,pi
 from scipy import linalg as la
 N = 26
 C = 1.0
@@ -29,18 +29,14 @@ for i in range(-N//2, N//2):
             radius=0.3
         )
     )
-t = 0
+
 dt = 0.01
 
 scale = 20
-
+phase=0
 while True:
     vp.rate(100)
-
+    phase = (phase + omega*dt) % (2*pi)
     for i in range(N):
-        particles[i].pos.x = (
-            (i-N//2)*2
-            + scale*x[i]*cos(omega*t)
-        )
+        particles[i].pos.x = ((i-N//2)*2+ scale*x[i]*cos(phase))
 
-    t += dt
