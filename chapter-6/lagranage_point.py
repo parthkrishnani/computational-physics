@@ -21,4 +21,3 @@ while err>1e-4:
     x2=x2_
 
 print(x2)
-    
