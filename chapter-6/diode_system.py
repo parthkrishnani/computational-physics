@@ -26,10 +26,10 @@ while err > 1e-10:
     
     F = np.array([f(x1, x2), g(x1, x2)])
     
-    dx = np.linalg.solve(J, -F)
+    dx = np.linalg.solve(J, F)
     
-    x1 += dx[0]
-    x2 += dx[1]
+    x1 -= dx[0]
+    x2 -= dx[1]
     
     err = np.sqrt(dx[0]**2 + dx[1]**2)
 
